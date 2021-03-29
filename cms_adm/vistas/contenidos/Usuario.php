@@ -3,7 +3,7 @@
       <div class="row justify-content-between">
          <div class="col-lg-3">
             <div class="input-group">
-               <input type="text" name="nombre" id="nombre" required>
+               <input type="text" name="nombre" id="nombre" required autofocus>
                <label for="nombre">Nombre de Usuario</label>
             </div>
          </div>
