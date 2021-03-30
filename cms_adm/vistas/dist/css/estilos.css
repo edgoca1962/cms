@@ -72,7 +72,7 @@
   transition: 0.3s ease-out;
 }
 .campos .input-group input:focus {
-  border-bottom: 3px solid rgb(0, 134, 71);
+  border-bottom: 1px solid rgba(251, 252, 251, 0.3);
 }
 .campos .input-group input:focus + label,
 .campos .input-group input:valid + label {
