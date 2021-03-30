@@ -80,3 +80,9 @@
   color: rgb(223, 223, 223);
   font-size: 0.8rem;
 }
+.invalid-feedback {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 0;
+  font-size: 0.8rem;
+}

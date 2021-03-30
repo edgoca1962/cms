@@ -4,9 +4,9 @@
          <img src="vistas/dist/img/generico.png" alt="">
          <h2>Ingreso</h2>
          <div class="input-group">
-            <input type="email" name="loginUser" id="loginUser" required autofocus>
-            <label for="loginUser">Usuario</label>
-            <div class="invalid-feedback">El usuario no es válido.</div>
+            <input type="text" name="loginUser" id="loginUser" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required autofocus>
+            <label for="loginUser">Correo</label>
+            <div class="invalid-feedback">El correo es inválido.</div>
          </div>
          <div class="input-group">
             <input type="password" name="loginPassword" id="loginPassword" required>
@@ -23,3 +23,4 @@
    </div>
    <div class="color-overlay"></div>
 </div>
+<!-- pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" -->
