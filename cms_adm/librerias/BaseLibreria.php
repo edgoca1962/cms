@@ -29,11 +29,19 @@ class BaseLibreria
     $this->salt = null;
   }
   protected function conectar()
+<<<<<<< HEAD
   {                                    //Hostinger
     $this->host = 'localhost';        // https://fgh-org.org/ctasbcos
     $this->usuario = 'root';          // u960867815_edgoca1962
     $this->clave = 'root';            //Fagohi1986
     $this->nombre_base = 'ctasbcos';  //u960867815_ctasbcos
+=======
+  {
+    $this->host = 'https://fgh-org.org/cms';
+    $this->usuario = 'u960867815_edgoca1962';
+    $this->clave = 'Fagohi1986';
+    $this->nombre_base = 'u960867815_cms';
+>>>>>>> 0902180d981aab86fcb27fba7c5e34254a3db05d
     $this->conector = 'mysql:host=' . $this->host . ";dbname=" . $this->nombre_base;
     $this->opciones = array(
       PDO::ATTR_PERSISTENT => true,
