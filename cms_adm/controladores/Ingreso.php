@@ -7,7 +7,7 @@ class Ingreso extends IngresoModelo
       parent::__construct();
       $this->vista = get_class($this) . ".php";
    }
-   public function inicio($parametros)
+   public function inicio($parametros = "")
    {
    }
    public function get_atributo($atributo)
