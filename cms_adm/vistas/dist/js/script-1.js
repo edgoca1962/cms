@@ -24,7 +24,7 @@ $(document).ready(function () {
         datos.push({ name: "elemento", value: "cerrar_sesion" });
         $.ajax({
           type: "post",
-          url: "./controladores/Jscript.php",
+          url: "./librerias/Jscript.php",
           data: datos,
           dataType: "json",
           success: function (respuesta) {
@@ -74,7 +74,7 @@ $(document).ready(function () {
     datos.push({ name: "elemento", value: "frm_ingreso" });
     $.ajax({
       type: "post",
-      url: "./controladores/Jscript.php",
+      url: "./librerias/Jscript.php",
       data: datos,
       dataType: "json",
       success: function (respuesta) {
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 datos.push({ name: "elemento", value: "cerrar_sesion" });
                 $.ajax({
                   type: "post",
-                  url: "./controladores/Jscript.php",
+                  url: "./librerias/Jscript.php",
                   data: datos,
                   dataType: "json",
                   success: function (respuesta) {
@@ -172,7 +172,7 @@ $(document).ready(function () {
       reader.onloadend = function () {
         var base64data = reader.result;
         $.ajax({
-          url: "./controladores/Jscript.php",
+          url: "./librerias/Jscript.php",
           method: "POST",
           data: {
             image: base64data,
