@@ -1,4 +1,70 @@
 <?php
+require_once "../librerias/NucleoLibreria.php";
+$nucleo = new NucleoLibreria("Ajax");
+$id = $_POST["id_formulario"];
+$boton = $_POST["id_boton"];
+$usuario = $_POST["loginUser"];
+$clave = $_POST["loginPassword"];
+
+$src = $_POST["src"];
+if ($_FILES["archivo"]["name"] != "") {
+    $img_nombre = $_FILES["archivo"]["name"];
+    $img_tipo = $_FILES["archivo"]["type"];
+    $img_tmp = $_FILES["archivo"]["tmp_name"];
+    $img_error = $_FILES["archivo"]["error"];
+    $img_tamano = $_FILES["archivo"]["size"];
+
+
+    //Manejo de imagen
+    // 1. Abrir la imagen creada temporalmente.
+    // 2. Crear imagen destino
+    // 3. Copiar origen en destino
+    //    1-2 x-y desde donde copiar en el origen
+    //    3-4 x-y destino
+    //    5-6 x-y origen
+    //    7-8 x-y ancho y alto destino
+    //    9-10 x-y ancho y alto origen
+    // 4. Exportar/guardar imagen modificada
+
+    $origen = imagecreatefromjpeg($img_tmp);
+    $anchoOrigenNatural = imagesx($origen);
+    $altoOrigenNatural = imagesy($origen);
+    //Mantener el ancho fijo y ajustar la altura manteniendo el ratio
+    // $anchoDestino = 200;
+    // $altoDestino = round($anchoDestino * $altoOrigenNatural / $anchoOrigenNatural);
+    //Mantener el alto fijo y ajustar el ancho manteniendo el ratio
+    $anchoDestino = round($altoDestino * $anchoDestino / $altoOrigenNatural);
+    $altoDestino = 200;
+    $destino = imagecreatetruecolor($anchoDestino, $altoDestino);
+    $anchoOrigenDesde =  0;
+    $altoOrigenDesde = 0;
+    $anchoDestinoDesde =  0;
+    $altoDestinoDesde = 0;
+    $x = imagecopyresampled($destino, $origen, $anchoOrigenDesde, $altoOrigenDesde, $anchoDestinoDesde, $altoDestinoDesde, $anchoDestino, $altoDestino, $anchoOrigenNatural, $altoOrigenNatural);
+    $carpetaDestino = "./" . $img_nombre;
+    imagejpeg($destino, $carpetaDestino, 100);
+
+
+    $respuesta = [
+        "tipo" => "4",
+        "carpetaDestino" => $carpetaDestino,
+        "fuente" => $src
+    ];
+} else {
+    $respuesta = ["tipo" => "1", "mensaje" => "Fuente elemento (src): $src"];
+}
+
+if ($id == "Ingreso") {
+    $respuesta = ["tipo" => "2", "direccion" => "http://localhost/cms/cms_adm/Inicio"];
+} else {
+    $respuesta;
+    /*$respuesta = ["tipo" => "1
+    ", "mensaje" => "Formulario: $id, con imagen: $imagen, con dirección: $src, envió submit con el boton: $boton"];*/
+}
+echo json_encode($respuesta);
+
+
+/*
 class Jscrip
 {
     private $ingreso;
@@ -75,3 +141,4 @@ if (isset($_POST["elemento"])) {
     }
     echo false;
 }
+*/

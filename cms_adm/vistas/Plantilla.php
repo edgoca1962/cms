@@ -30,7 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="vistas/plugins/summernote/summernote-bs4.min.css">
-
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="vistas/dist/css/estilos.css">
 </head>
@@ -43,13 +46,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <?php
   if ($controlador->get_atributo('vista') == "Ingreso.php") {
-    include "vistas/contenidos/" . $controlador->get_atributo('vista');
+    include_once "vistas/contenidos/" . $controlador->get_atributo('vista');
   } else {
-    include "vistas/contenidos/Navegacion.php";
+    include_once "vistas/contenidos/Navegacion.php";
   }
   ?>
 
+
   <!-- REQUIRED SCRIPTS -->
+  <!-- BOOTSTRAP 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
   <!-- jQuery -->
   <script src="vistas/plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
@@ -58,8 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
-  <!-- Bootstrap 4 -->
-  <script src="vistas/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   <!-- PAGE PLUGINS -->
   <!-- jQuery Mapael -->
   <script src="vistas/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
@@ -92,6 +99,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="vistas/dist/js/pages/dashboard.js"></script>
   <script src="vistas/dist/js/pages/dashboard2.js"></script>
   <script src="vistas/dist/js/pages/dashboard3.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="vistas/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   <script src="vistas/dist/js/scripts.js"></script>
 </body>
 

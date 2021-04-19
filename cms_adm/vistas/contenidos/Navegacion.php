@@ -143,7 +143,7 @@
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-               <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column nav-compact" data-widget="treeview" role="menu" data-accordion="false">
+               <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column nav-compact" data-widget="treeview" role="menu" data-accordion="false" id="menu">
                   <!-- Add icons to the links using the .nav-icon class
                   with font-awesome or any other icon font library -->
                   <li class="nav-item has-treeview">
@@ -232,7 +232,7 @@
          <!-- /.content-header -->
 
          <!-- Main content -->
-         <?php include "vistas/contenidos/" . $controlador->get_atributo('vista'); ?>
+         <?php include_once "vistas/contenidos/" . $controlador->get_atributo('vista'); ?>
          <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
