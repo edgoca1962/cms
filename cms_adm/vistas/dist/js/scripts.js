@@ -78,8 +78,8 @@ if (imagenOverlay) {
 }
 /* Rutina para el manejo de la imágen de Usuario */
 const archivo = document.getElementById("archivo");
+let srcEncoded, srcEncodedExport;
 if (archivo) {
-  let srcEncoded, srcEncodedExport;
   const fuenteImagen = document.getElementById("imagen");
   archivo.addEventListener("change", (e) => {
     const imagen = document.getElementById("imagen");
