@@ -24,7 +24,7 @@
          </div>
       </div>
       <div class="editarImagen" id="editarImagen">
-         <img src="./vistas/dist/img/user1-128x128.jpg" alt="Imágen de Usuario" name="imagen" class="img-thumbnail rounded-circle" id="imagen">
+         <img src="./vistas/dist/img/generico.png" alt="Imágen de Usuario" name="imagen" class="img-thumbnail rounded-circle" id="imagen">
          <div class="imagenOverlay" id="imagenOverlay">
             <input type="file" name="archivo" class="capturaArchivo" id="archivo" accept=".jpg, .jpeg, .png">
             <label for="archivo" id="labelEditar"><i class="fas fa-pen-square"></i></label>

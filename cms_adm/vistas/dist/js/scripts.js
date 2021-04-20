@@ -101,29 +101,41 @@ if (archivo) {
             let canvas = document.createElement("canvas");
             let MAX_WIDTH = 400;
             let ctx = canvas.getContext("2d");
-            if (e.target.height > e.target.width) {
-              var sx = e.target.width / 8;
-              var anchoAlto = e.target.width - 2 * sx;
-              var sy = e.target.height / 2 - anchoAlto / 2;
-              var sw = anchoAlto;
-              var sh = anchoAlto;
+            var sx, sy, sw, sh, dx, dy, dw, dh;
+            if (e.target.height == e.target.width) {
+              sx = 0;
+              sy = 0;
+              sw = e.target.width;
+              sh = e.target.height;
               canvas.width = MAX_WIDTH;
-              canvas.height = e.target.height * (MAX_WIDTH / e.target.height);
-              var dw = MAX_WIDTH;
-              var dh = e.target.height * (MAX_WIDTH / e.target.height);
-            } else {
-              var sy = e.target.height / 8;
-              var anchoAlto = e.target.height - 2 * sy;
-              var sx = e.target.width / 2 - anchoAlto / 2;
-              var sw = anchoAlto;
-              var sh = anchoAlto;
-              canvas.width = e.target.width * (MAX_WIDTH / e.target.width);
               canvas.height = MAX_WIDTH;
-              var dw = MAX_WIDTH;
-              var dh = e.target.width * (MAX_WIDTH / e.target.width);
+              dw = MAX_WIDTH;
+              dh = MAX_WIDTH;
+            } else {
+              if (e.target.height > e.target.width) {
+                sx = e.target.width / 8;
+                anchoAlto = e.target.width - 2 * sx;
+                sy = e.target.height / 2 - anchoAlto / 2;
+                sw = anchoAlto;
+                sh = anchoAlto;
+                canvas.width = MAX_WIDTH;
+                canvas.height = e.target.height * (MAX_WIDTH / e.target.height);
+                dw = MAX_WIDTH;
+                dh = e.target.height * (MAX_WIDTH / e.target.height);
+              } else {
+                sy = e.target.height / 8;
+                anchoAlto = e.target.height - 2 * sy;
+                sx = e.target.width / 2 - anchoAlto / 2;
+                sw = anchoAlto;
+                sh = anchoAlto;
+                canvas.width = e.target.width * (MAX_WIDTH / e.target.width);
+                canvas.height = MAX_WIDTH;
+                dw = MAX_WIDTH;
+                dh = e.target.width * (MAX_WIDTH / e.target.width);
+              }
             }
-            let dx = 0;
-            let dy = 0;
+            dx = 0;
+            dy = 0;
             ctx.drawImage(e.target, sx, sy, sw, sh, dx, dy, dw, dh);
             srcEncoded = ctx.canvas.toDataURL(e.target, tipoArchivo);
             document.querySelector("#imagen").src = srcEncoded;
