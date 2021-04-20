@@ -1,17 +1,17 @@
 /*Rutina para el trasiego de información al MVC */
-var form = document.querySelector(".needs-validation");
+const form = document.querySelector(".needs-validation");
 if (form) {
   form.addEventListener("submit", validarEjecutar, false);
   form.addEventListener("click", validarEjecutar, false);
   function validarEjecutar(e) {
-    var idFrm = form.getAttribute("id");
-    var idBtn = e.target.getAttribute("id");
+    const idFrm = form.getAttribute("id");
+    const idBtn = e.target.getAttribute("id");
     if (e.target.getAttribute("type") == "submit") {
       e.preventDefault();
       if (!form.checkValidity()) {
         e.stopPropagation();
       } else {
-        var datos = new FormData(form);
+        let datos = new FormData(form);
         datos.append("id_formulario", idFrm);
         datos.append("id_boton", idBtn);
         datos.append("nuevoArchivo", srcEncodedExport);
@@ -50,24 +50,24 @@ if (form) {
   }
 }
 /*Rutina para marcar la opción de menu seleccionada */
-var menu = document.getElementById("menu");
+const menu = document.getElementById("menu");
 if (menu) {
-  var opciones = document.querySelector(".nav").querySelectorAll("a");
-  var opcionSeleccionada = location.href;
+  const opciones = document.querySelector(".nav").querySelectorAll("a");
+  const opcionSeleccionada = location.href;
   for (let i = 0; i < opciones.length; i++) {
     opciones[i].classList.remove("active");
     opciones[i].classList.remove("menu-open");
     if (opciones[i].href === opcionSeleccionada) {
       opciones[i].classList.add("active");
-      var menuOpcion = opciones[i].parentElement.parentElement.parentElement;
+      let menuOpcion = opciones[i].parentElement.parentElement.parentElement;
       menuOpcion.classList.add("menu-open");
-      var menuActivado = menuOpcion.children[0];
+      let menuActivado = menuOpcion.children[0];
       menuActivado.classList.add("active");
     }
   }
 }
 /*Rutina para el sombreado de campo en dispositivos móbiles. */
-var imagenOverlay = document.getElementById("imagenOverlay");
+const imagenOverlay = document.getElementById("imagenOverlay");
 if (imagenOverlay) {
   imagenOverlay.addEventListener("touchstart", () => {
     imagenOverlay.classList.add("imgOverMobile");
@@ -77,31 +77,31 @@ if (imagenOverlay) {
   });
 }
 /* Rutina para el manejo de la imágen de Usuario */
-var archivo = document.getElementById("archivo");
-var srcEncoded, srcEncodedExport;
+const archivo = document.getElementById("archivo");
 if (archivo) {
-  var fuenteImagen = document.getElementById("imagen");
+  let srcEncoded, srcEncodedExport;
+  const fuenteImagen = document.getElementById("imagen");
   archivo.addEventListener("change", (e) => {
-    var imagen = document.getElementById("imagen");
-    var frmData = new FormData(form);
+    const imagen = document.getElementById("imagen");
+    let frmData = new FormData(form);
     if (parseInt(frmData.get("archivo").size) <= 2000000) {
-      var archivo = frmData.get("archivo");
-      var tipoArchivo = frmData.get("type");
-      var fuente = fuenteImagen.getAttribute("src");
-      var src = URL.createObjectURL(archivo);
+      let archivo = frmData.get("archivo");
+      let tipoArchivo = frmData.get("type");
+      let fuente = fuenteImagen.getAttribute("src");
+      let src = URL.createObjectURL(archivo);
       if (archivo.name == "") {
         imagen.setAttribute("src", fuente);
       } else {
-        let reader = new FileReader();
+        const reader = new FileReader();
         reader.readAsDataURL(archivo);
         reader.onload = function (event) {
-          let imgElement = document.createElement("img");
+          const imgElement = document.createElement("img");
           imgElement.src = event.target.result;
           imgElement.onload = function (e) {
-            let canvas = document.createElement("canvas");
-            let MAX_WIDTH = 400;
-            let ctx = canvas.getContext("2d");
-            var sx, sy, sw, sh, dx, dy, dw, dh;
+            const canvas = document.createElement("canvas");
+            const MAX_WIDTH = 400;
+            const ctx = canvas.getContext("2d");
+            let sx, sy, sw, sh, dx, dy, dw, dh;
             if (e.target.height == e.target.width) {
               sx = 0;
               sy = 0;
