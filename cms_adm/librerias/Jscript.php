@@ -19,7 +19,7 @@ if ($id == "Ingreso") {
     $usuario = $_POST["loginUser"];
     $clave = $_POST["loginPassword"];
 
-    $respuesta = ["tipo" => "2", "direccion" => "http://localhost/cms/cms_adm/Inicio"];
+    $respuesta = ["tipo" => "2", "direccion" => "Inicio"];
 } else {
     /*
     Incluir la rutina de los controladores según lo que venga en el ID
