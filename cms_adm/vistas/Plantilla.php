@@ -23,7 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- JQVMap -->
   <link rel="stylesheet" href="vistas/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="vistas/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="vistas/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="vistas/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -35,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="vistas/dist/css/estilos.css">
+  <link rel="stylesheet" href="vistas/css/estilos.css">
 </head>
 <!--
   hold-transition sidebar-mini
@@ -92,17 +92,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- overlayScrollbars -->
   <script src="vistas/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="vistas/dist/js/adminlte.js"></script>
+  <script src="vistas/js/adminlte.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="vistas/dist/js/demo.js"></script>
+  <script src="vistas/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="vistas/dist/js/pages/dashboard.js"></script>
-  <script src="vistas/dist/js/pages/dashboard2.js"></script>
-  <script src="vistas/dist/js/pages/dashboard3.js"></script>
+  <script src="vistas/js/pages/dashboard.js"></script>
+  <script src="vistas/js/pages/dashboard2.js"></script>
+  <script src="vistas/js/pages/dashboard3.js"></script>
   <!-- Bootstrap 4 -->
   <script src="vistas/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script src="vistas/dist/js/scripts.js"></script>
+  <script src="vistas/js/scripts.js"></script>
 </body>
 
 </html>
