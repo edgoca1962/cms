@@ -11,7 +11,7 @@ if (form) {
       if (!form.checkValidity()) {
         e.stopPropagation();
       } else {
-        let datos = new FormData(form);
+        const datos = new FormData(form);
         datos.append("id_formulario", idFrm);
         datos.append("id_boton", idBtn);
         datos.append("nuevoArchivo", srcEncodedExport);
@@ -59,9 +59,9 @@ if (menu) {
     opciones[i].classList.remove("menu-open");
     if (opciones[i].href === opcionSeleccionada) {
       opciones[i].classList.add("active");
-      let menuOpcion = opciones[i].parentElement.parentElement.parentElement;
+      const menuOpcion = opciones[i].parentElement.parentElement.parentElement;
       menuOpcion.classList.add("menu-open");
-      let menuActivado = menuOpcion.children[0];
+      const menuActivado = menuOpcion.children[0];
       menuActivado.classList.add("active");
     }
   }
@@ -83,12 +83,12 @@ if (archivo) {
   const fuenteImagen = document.getElementById("imagen");
   archivo.addEventListener("change", (e) => {
     const imagen = document.getElementById("imagen");
-    let frmData = new FormData(form);
+    const frmData = new FormData(form);
     if (parseInt(frmData.get("archivo").size) <= 2000000) {
-      let archivo = frmData.get("archivo");
-      let tipoArchivo = frmData.get("type");
-      let fuente = fuenteImagen.getAttribute("src");
-      let src = URL.createObjectURL(archivo);
+      const archivo = frmData.get("archivo");
+      const tipoArchivo = frmData.get("type");
+      const fuente = fuenteImagen.getAttribute("src");
+      const src = URL.createObjectURL(archivo);
       if (archivo.name == "") {
         imagen.setAttribute("src", fuente);
       } else {
