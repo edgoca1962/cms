@@ -28,7 +28,7 @@ if ($id == "Ingreso") {
     $tipoImagen = explode("/", $_FILES["archivo"]["type"]);
     $nuevoArchivo = base64_decode($_POST["nuevoArchivo"]);
     $image_path = '../vistas/dist/img/';
-    $image_name = 'img_' . time() . "." . $tipoImagen[1];
+    $image_name = 'usr' . time() . "." . $tipoImagen[1];
 
     /*
     $parametros=[...datos POST...]

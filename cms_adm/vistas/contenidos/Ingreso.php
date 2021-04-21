@@ -1,4 +1,4 @@
-<div class="total" style="height:100%; background-image: url('vistas/dist/img/fondo02.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center; background-attachment:fixed;">
+<div class="total" style="height:100%; background-image: url('vistas/dist/img/generales/fondo02.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center; background-attachment:fixed;">
    <div class="contenido-ingreso">
       <form class="ingreso campos needs-validation" id="Ingreso" novalidate>
          <img src="vistas/dist/img/generico.png" alt="">

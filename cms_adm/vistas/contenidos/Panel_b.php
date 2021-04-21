@@ -765,7 +765,7 @@
               <ul class="products-list product-list-in-card pl-2 pr-2">
                 <li class="item">
                   <div class="product-img">
-                    <img src="vistas/dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                    <img src="vistas/dist/img/generales/default-150x150.png" alt="Product Image" class="img-size-50">
                   </div>
                   <div class="product-info">
                     <a href="javascript:void(0)" class="product-title">Samsung TV
@@ -778,7 +778,7 @@
                 <!-- /.item -->
                 <li class="item">
                   <div class="product-img">
-                    <img src="vistas/dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                    <img src="vistas/dist/img/generales/default-150x150.png" alt="Product Image" class="img-size-50">
                   </div>
                   <div class="product-info">
                     <a href="javascript:void(0)" class="product-title">Bicycle
@@ -791,7 +791,7 @@
                 <!-- /.item -->
                 <li class="item">
                   <div class="product-img">
-                    <img src="vistas/dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                    <img src="vistas/dist/img/generales/default-150x150.png" alt="Product Image" class="img-size-50">
                   </div>
                   <div class="product-info">
                     <a href="javascript:void(0)" class="product-title">
@@ -807,7 +807,7 @@
                 <!-- /.item -->
                 <li class="item">
                   <div class="product-img">
-                    <img src="vistas/dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                    <img src="vistas/dist/img/generales/default-150x150.png" alt="Product Image" class="img-size-50">
                   </div>
                   <div class="product-info">
                     <a href="javascript:void(0)" class="product-title">PlayStation 4
