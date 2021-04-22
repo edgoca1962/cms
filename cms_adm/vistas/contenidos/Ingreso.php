@@ -1,8 +1,8 @@
-<div class="total" style="height:100%; background-image: url('vistas/dist/img/generales/fondo02.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center; background-attachment:fixed;">
+<div class="total" style="height:100%; background-image: url('vistas/img/generales/fondo02.jpg'); background-repeat:no-repeat; background-size: cover; background-position:center; background-attachment:fixed;">
    <div class="contenido-ingreso">
       <form class="ingreso campos needs-validation" id="Ingreso" novalidate>
          <img src="vistas/dist/img/generico.png" alt="">
-         <h2>Ingreso</h2>
+         <h2>Credenciales</h2>
          <div class="input-group">
             <input type="text" name="loginUser" id="loginUser" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required autofocus>
             <label for="loginUser">Correo</label>
