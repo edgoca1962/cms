@@ -120,3 +120,6 @@
 .imagenOverlay:hover {
   opacity: 1;
 }
+.dragOver {
+  opacity: 1;
+}
