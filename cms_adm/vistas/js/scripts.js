@@ -1,5 +1,6 @@
 /*Rutina para el trasiego de información al MVC */
 const form = document.querySelector(".needs-validation");
+let srcEncoded;
 if (form) {
   form.addEventListener("submit", validarEjecutar, false);
   form.addEventListener("click", validarEjecutar, false);
@@ -14,7 +15,7 @@ if (form) {
         const datos = new FormData(form);
         datos.append("id_formulario", idFrm);
         datos.append("id_boton", idBtn);
-        datos.append("nuevoArchivo", srcEncodedExport);
+        datos.append("nuevoArchivo", srcEncoded);
         fetch("./librerias/Jscript.php", {
           method: "POST",
           body: datos,
@@ -134,8 +135,8 @@ if (archivo) {
             canva.width,
             canva.height
           );
-          const srcEncode = ctx.canvas.toDataURL(element.target, imgTipo, 0);
-          document.getElementById("imagen").src = srcEncode;
+          srcEncoded = ctx.canvas.toDataURL(element.target, imgTipo, 1.0);
+          document.getElementById("imagen").src = srcEncoded;
         };
       };
     } else {
@@ -159,7 +160,6 @@ if (archivo) {
   });
   */
 }
-
 /* Rutina para el manejo de la imágen de Usuario
 const archivo = document.getElementById("archivo");
 let srcEncoded, srcEncodedExport;

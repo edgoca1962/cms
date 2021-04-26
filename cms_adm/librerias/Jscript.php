@@ -17,7 +17,20 @@ if ($id == "Ingreso") {
     $clave = $_POST["loginPassword"];
     $respuesta = ["tipo" => "2", "direccion" => "Inicio"];
 } else {
-    $respuesta = ["tipo" => "1", "mensaje" => "Crear procedimientos para cada controlador."];
+    /* 
+    Incluir esta rutina en el controlador Usuario
+    para el registro de la nueva imagen que implica
+    gurardar imagen en disco.
+    
+    $imgUsuarioNueva = $_POST["nuevoArchivo"];
+    $imgUsuarioNuevaCortada = substr($imgUsuarioNueva, strpos($imgUsuarioNueva, ",") + 1);
+    $imgUsuarioBase64 = base64_decode($imgUsuarioNuevaCortada);
+    $imgUsuario = fopen('../vistas/img/usuarios/usr123456789.jpg', 'w');
+    fwrite($imgUsuario, $imgUsuarioBase64);
+    fclose($imgUsuario);
+    */
+
+    $respuesta = ["tipo" => "1", "mensaje" => "Crear procedimiento dinámico por controlador."];
 }
 
 /*
