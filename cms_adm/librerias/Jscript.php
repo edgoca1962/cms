@@ -12,37 +12,12 @@ Se capturan los campos del formulario incluidos archivos
 $idSesion = "idSesion";
 $id = $_POST["id_formulario"];
 $boton = $_POST["id_boton"];
-
-
 if ($id == "Ingreso") {
-
     $usuario = $_POST["loginUser"];
     $clave = $_POST["loginPassword"];
-
     $respuesta = ["tipo" => "2", "direccion" => "Inicio"];
 } else {
-    /*
-    Incluir la rutina de los controladores según lo que venga en el ID
-
-    /*Datos si se captura imagen de usuario*/
-    $tipoImagen = explode("/", $_FILES["archivo"]["type"]);
-    $nuevoArchivo = base64_decode($_POST["nuevoArchivo"]);
-    $image_path = '../vistas/dist/img/';
-    $image_name = 'usr' . time() . "." . $tipoImagen[1];
-
-    /*
-    $parametros=[...datos POST...]
-    $controlador = new $id;
-    $controlador->inicio($parametros);
-    */
-
-
-    /*Esta rutina es para el formulario que requiera procesar un archivo. */
-    if (file_put_contents($image_path . $image_name, $nuevoArchivo)) {
-        $respuesta = ["tipo" => "1", "mensaje" => "Tipo Archivo: $tipoImagen[1]"];
-    } else {
-        $respuesta = ["tipo" => "3", "mensaje" => "Error al guardar el archivo."];
-    }
+    $respuesta = ["tipo" => "1", "mensaje" => "Crear procedimientos para cada controlador."];
 }
 
 /*
