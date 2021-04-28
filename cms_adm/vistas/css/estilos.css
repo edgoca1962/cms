@@ -39,8 +39,9 @@
   top: -50px;
   left: calc(50% - 50px);
   width: 100px;
-  background: rba(255, 255.255.0.8);
+  background: rgba(145, 145, 145, 0.8);
   border-radius: 50%;
+  /* border: 1px solid; */
 }
 .ingreso h2 {
   text-align: center;
